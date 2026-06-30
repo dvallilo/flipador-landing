@@ -130,14 +130,29 @@ nav {
 }
 .btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: var(--white); }
 .hero-stats {
-  display: flex; gap: 2.5rem; margin-top: 3.5rem;
+  display: flex; gap: 1rem; margin-top: 3.5rem;
   padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);
+}
+.hero-stat-card {
+  flex: 1;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 14px;
+  padding: 1.1rem 1rem;
+  display: flex; flex-direction: column; gap: 0.5rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+.hero-stat-card:hover { background: rgba(255,255,255,0.07); border-color: rgba(212,149,106,0.35); }
+.hero-stat-icon {
+  width: 28px; height: 28px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--copper, #D4956A);
 }
 .hero-stat-n {
   font-family: 'Playfair Display', serif;
-  font-size: 1.8rem; font-weight: 700; color: var(--white); line-height: 1;
+  font-size: 1.7rem; font-weight: 700; color: var(--white); line-height: 1;
 }
-.hero-stat-l { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.hero-stat-l { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 0.15rem; line-height: 1.35; font-weight: 500; }
 .hero-right {
   background: var(--sand);
   display: flex; align-items: center; justify-content: center;
@@ -196,13 +211,13 @@ nav {
 /* ── PROOF STRIP ── */
 .proof-strip {
   background: var(--carbon);
-  padding: 1.2rem clamp(1.5rem, 5vw, 4rem);
+  padding: 1.85rem clamp(1.5rem, 5vw, 4rem);
   display: flex; align-items: center; justify-content: center;
-  gap: clamp(2rem, 5vw, 5rem); flex-wrap: wrap;
+  gap: clamp(1.75rem, 4vw, 3.5rem); flex-wrap: wrap;
 }
-.proof-item { display: flex; align-items: center; gap: 0.6rem; color: rgba(255,255,255,0.55); font-size: 0.8rem; font-weight: 500; white-space: nowrap; }
+.proof-item { display: flex; align-items: center; gap: 0.65rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; font-weight: 600; white-space: nowrap; }
 .proof-item svg { flex-shrink: 0; }
-.proof-dot { width: 4px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 50%; }
+.proof-dot { width: 5px; height: 5px; background: rgba(255,255,255,0.25); border-radius: 50%; flex-shrink: 0; }
 
 /* ── SECTIONS COMMON ── */
 section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
@@ -442,9 +457,10 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
   .dossie-page { width: 250px; }
 }
 @media (max-width: 600px) {
-  .proof-strip { flex-direction: column; gap: 0.75rem; }
+  .proof-strip { flex-direction: column; align-items: flex-start; gap: 0.95rem; padding: 1.5rem 1.5rem; }
   .proof-dot { display: none; }
   .hero-stats { flex-wrap: wrap; }
+  .hero-stat-card { min-width: calc(50% - 0.5rem); }
   .footer-links { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -483,17 +499,26 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
       <a href="#como-funciona" class="btn-ghost">Ver como funciona</a>
     </div>
     <div class="hero-stats">
-      <div>
-        <div class="hero-stat-n">10</div>
-        <div class="hero-stat-l">Score máximo de avaliação</div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="hero-stat-n">IA</div>
+        <div class="hero-stat-l">Análise completa do imóvel em segundos</div>
       </div>
-      <div>
-        <div class="hero-stat-n">18</div>
-        <div class="hero-stat-l">Pontos de vistoria técnica</div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+        </div>
+        <div class="hero-stat-n">0–10</div>
+        <div class="hero-stat-l">Score de viabilidade — decisão clara, não achismo</div>
       </div>
-      <div>
-        <div class="hero-stat-n">3</div>
-        <div class="hero-stat-l">PDFs profissionais gerados</div>
+      <div class="hero-stat-card">
+        <div class="hero-stat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+        </div>
+        <div class="hero-stat-n">2 PDFs</div>
+        <div class="hero-stat-l">Prontos para levar à mesa de negociação</div>
       </div>
     </div>
   </div>
@@ -548,22 +573,37 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
 <!-- PROOF STRIP -->
 <div class="proof-strip">
   <div class="proof-item">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5z"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><path d="M12 2L9.5 9.5 2 12l7.5 2.5L12 22l2.5-7.5L22 12l-7.5-2.5z"/></svg>
     Análise de fotos com IA
   </div>
   <div class="proof-dot"></div>
   <div class="proof-item">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
     Validação por bairro, cidade e estado
   </div>
   <div class="proof-dot"></div>
   <div class="proof-item">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><path d="M3 3v18h18"/><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/></svg>
+    Score de viabilidade 0–10
+  </div>
+  <div class="proof-dot"></div>
+  <div class="proof-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
     2 PDFs profissionais
   </div>
   <div class="proof-dot"></div>
   <div class="proof-item">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+    Gestão completa de obra
+  </div>
+  <div class="proof-dot"></div>
+  <div class="proof-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+    Notas por voz com IA
+  </div>
+  <div class="proof-dot"></div>
+  <div class="proof-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4956A" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
     Mobile e desktop
   </div>
 </div>
