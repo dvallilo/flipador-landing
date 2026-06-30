@@ -8,10 +8,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
+ 
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
 :root {
   --primary:   #8B4513;
   --primary-d: #6B340E;
@@ -28,7 +28,7 @@
   --white:     #FFFFFF;
   --page-bg:   #F8F5F1;
 }
-
+ 
 html { scroll-behavior: smooth; }
 body {
   font-family: 'Inter', sans-serif;
@@ -37,7 +37,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-
+ 
 /* ── NAV ── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -64,7 +64,7 @@ nav {
   transition: background 0.2s, transform 0.15s;
 }
 .nav-cta:hover { background: var(--primary-d); transform: translateY(-1px); }
-
+ 
 /* ── HERO ── */
 .hero {
   min-height: 100vh;
@@ -158,7 +158,7 @@ nav {
   display: flex; align-items: center; justify-content: center;
   padding: clamp(2rem, 5vw, 4rem) clamp(2rem, 5vw, 5rem);
 }
-
+ 
 /* ── APP MOCKUP (hero) ── */
 .app-mockup {
   background: var(--white); border-radius: 24px;
@@ -207,7 +207,7 @@ nav {
 .sqm-cell.mid .sqm-cell-val { color: var(--primary); }
 .mockup-ai-tag { display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 0.75rem; background: rgba(139,69,19,0.08); color: var(--primary); font-size: 0.65rem; font-weight: 600; padding: 0.2rem 0.55rem; border-radius: 6px; border: 1px solid rgba(139,69,19,0.2); }
 .mockup-ai-tag::before { content: '✦'; }
-
+ 
 /* ── PROOF STRIP ── */
 .proof-strip {
   background: var(--carbon);
@@ -218,7 +218,7 @@ nav {
 .proof-item { display: flex; align-items: center; gap: 0.65rem; color: rgba(255,255,255,0.72); font-size: 0.95rem; font-weight: 600; white-space: nowrap; }
 .proof-item svg { flex-shrink: 0; }
 .proof-dot { width: 5px; height: 5px; background: rgba(255,255,255,0.25); border-radius: 50%; flex-shrink: 0; }
-
+ 
 /* ── SECTIONS COMMON ── */
 section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .section-eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--primary); margin-bottom: 0.85rem; }
@@ -226,25 +226,25 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .section-sub { font-size: 1.05rem; color: var(--secondary); max-width: 55ch; line-height: 1.7; }
 .text-center { text-align: center; }
 .text-center .section-sub { margin: 0 auto; }
-
+ 
 /* ── COMO FUNCIONA (5 STEPS) ── */
 .section-how { background: var(--carbon); }
 .how-inner { max-width: 1200px; margin: 0 auto; }
 .how-inner .section-eyebrow { color: #D4956A; }
 .how-inner .section-title { color: var(--white); }
 .how-inner .section-sub { color: rgba(255,255,255,0.55); margin: 0 auto 3.5rem; }
-
+ 
 .how-steps {
   display: flex; flex-direction: column; gap: 5rem;
 }
-
+ 
 .how-step {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 4rem; align-items: center;
 }
 .how-step.reverse { direction: rtl; }
 .how-step.reverse > * { direction: ltr; }
-
+ 
 .how-step-content {}
 .how-step-num {
   font-family: 'Playfair Display', serif;
@@ -261,7 +261,7 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
   font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.75rem;
 }
 .how-step-highlight::before { content: '✦'; font-size: 0.55rem; }
-
+ 
 /* Step mockup screens */
 .step-screen {
   background: var(--white); border-radius: 20px;
@@ -274,7 +274,7 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
   position: absolute; top: 0; left: 0; right: 0; height: 3px;
   background: linear-gradient(90deg, var(--primary), #D4956A);
 }
-
+ 
 /* Screen: step 1 — cadastro */
 .s1-form { display: flex; flex-direction: column; gap: 0.6rem; }
 .s1-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
@@ -288,7 +288,7 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .s1-input.filled { border-color: var(--primary); background: rgba(139,69,19,0.04); }
 .s1-input.select-filled { border-color: var(--green); background: var(--green-bg); color: var(--green); font-weight: 600; }
 .s1-days { font-family: 'JetBrains Mono', monospace; font-weight: 500; }
-
+ 
 /* Screen: step 2 — checklist */
 .s2-cats { display: flex; flex-direction: column; gap: 0.65rem; }
 .s2-cat-label { font-size: 0.65rem; font-weight: 700; color: var(--secondary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
@@ -304,14 +304,14 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .s2-progress { height: 4px; background: var(--border); border-radius: 99px; overflow: hidden; margin-top: 0.75rem; }
 .s2-progress-fill { height: 100%; width: 72%; background: var(--green); border-radius: 99px; }
 .s2-progress-label { font-size: 0.6rem; color: var(--secondary); margin-top: 0.3rem; }
-
+ 
 /* Screen: step 3 — fotos IA */
 .s3-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem; }
 .s3-title { font-size: 0.75rem; font-weight: 600; color: var(--concrete); }
 .s3-count { font-size: 0.65rem; color: var(--secondary); }
-
-
-
+ 
+ 
+ 
 .s3-result { background: var(--carbon); border-radius: 10px; padding: 0.85rem; margin-top: 0.65rem; }
 .s3-res-label { font-size: 0.58rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.5rem; }
 .s3-problem { background: rgba(255,255,255,0.06); border-radius: 7px; padding: 0.5rem 0.65rem; display: flex; gap: 0.5rem; align-items: flex-start; margin-bottom: 0.35rem; }
@@ -320,7 +320,7 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .s3-sev.media { background: rgba(193,127,36,0.3); color: #E0A040; }
 .s3-sev.leve { background: rgba(74,124,89,0.3); color: #80C090; }
 .s3-ptext { font-size: 0.68rem; color: rgba(255,255,255,0.75); line-height: 1.4; }
-
+ 
 /* Screen: step 4 — financeiro + m² */
 .s4-sqm { background: var(--sand); border-radius: 10px; padding: 0.75rem; margin-bottom: 0.75rem; }
 .s4-sqm-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
@@ -340,7 +340,7 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .s4-field-val.green { color: var(--green); }
 .s4-field-val.amber { color: var(--amber); }
 .s4-divider { height: 1px; background: var(--border); margin: 0.4rem 0; }
-
+ 
 /* Screen: step 5 — score + PDF */
 .s5-score-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
 .s5-circle { width: 72px; height: 72px; position: relative; flex-shrink: 0; }
@@ -361,7 +361,7 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .s5-bar-track { height: 4px; background: var(--border); border-radius: 99px; overflow: hidden; }
 .s5-bar-fill { height: 100%; border-radius: 99px; }
 .s5-pdf-btn { width: 100%; background: var(--primary); color: var(--white); border-radius: 8px; padding: 0.65rem; font-size: 0.78rem; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 0.4rem; border: none; cursor: default; pointer-events: none; }
-
+ 
 /* ── AI SECTION ── */
 .section-ai { background: var(--white); }
 .ai-inner { max-width: 1200px; margin: 0 auto; }
@@ -388,7 +388,7 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .ai-vis-footer-icon { width: 32px; height: 32px; background: rgba(139,69,19,0.3); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
 .ai-vis-footer-text { font-size: 0.78rem; color: rgba(255,255,255,0.55); line-height: 1.4; }
 .ai-vis-footer-text strong { color: rgba(255,255,255,0.85); }
-
+ 
 /* ── DOSSIE SECTION ── */
 .section-dossie { background: var(--page-bg); }
 .dossie-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
@@ -417,7 +417,7 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .dossie-benefit-check { width: 22px; height: 22px; border-radius: 50%; background: var(--green-bg); color: var(--green); display: flex; align-items: center; justify-content: center; font-size: 0.65rem; flex-shrink: 0; margin-top: 2px; font-weight: 700; }
 .dossie-benefit-title { font-size: 0.9rem; font-weight: 600; color: var(--concrete); margin-bottom: 0.2rem; }
 .dossie-benefit-desc { font-size: 0.82rem; color: var(--secondary); line-height: 1.55; }
-
+ 
 /* ── CTA FINAL ── */
 .section-cta { background: var(--carbon); text-align: center; padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem); position: relative; overflow: hidden; }
 .section-cta::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(139,69,19,0.15) 0%, transparent 65%); pointer-events: none; }
@@ -428,7 +428,7 @@ section { padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 5vw, 4rem); }
 .cta-btn { display: inline-flex; align-items: center; gap: 0.6rem; background: var(--primary); color: var(--white); padding: 1rem 2.5rem; border-radius: 12px; font-size: 1.05rem; font-weight: 700; text-decoration: none; box-shadow: 0 8px 32px rgba(139,69,19,0.45); transition: background 0.2s, transform 0.2s, box-shadow 0.2s; }
 .cta-btn:hover { background: var(--primary-d); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(139,69,19,0.5); }
 .cta-disclaimer { font-size: 0.78rem; color: rgba(255,255,255,0.3); margin-top: 1.25rem; }
-
+ 
 /* ── FOOTER ── */
 footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
 .footer-brand { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: rgba(255,255,255,0.7); }
@@ -436,14 +436,14 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
 .footer-links a { font-size: 0.78rem; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: rgba(255,255,255,0.6); }
 .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
-
+ 
 /* ── SCROLL REVEAL ── */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
-
+ 
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
@@ -473,13 +473,13 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Flipador<span>.app</span></a>
   <a href="#comecar" class="nav-cta">Comece gratuitamente →</a>
 </nav>
-
+ 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
@@ -522,7 +522,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
       </div>
     </div>
   </div>
-
+ 
   <div class="hero-right">
     <div class="app-mockup">
       <div class="mockup-header">
@@ -569,7 +569,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
     </div>
   </div>
 </section>
-
+ 
 <!-- PROOF STRIP -->
 <div class="proof-strip">
   <div class="proof-item">
@@ -607,7 +607,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
     Mobile e desktop
   </div>
 </div>
-
+ 
 <!-- COMO FUNCIONA — 5 STEPS -->
 <section class="section-how" id="como-funciona">
   <div class="how-inner">
@@ -616,9 +616,9 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
       <h2 class="section-title">Do imóvel ao relatório em 5 minutos</h2>
       <p class="section-sub">Sem planilhas, sem achismo. O Flipador guia você passo a passo — do cadastro do imóvel até o relatório profissional pronto para compartilhar com sócios.</p>
     </div>
-
+ 
     <div class="how-steps" style="margin-top:4rem">
-
+ 
       <!-- STEP 1 -->
       <div class="how-step reveal reveal-delay-1">
         <div class="how-step-content">
@@ -670,7 +670,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
           </div>
         </div>
       </div>
-
+ 
       <!-- STEP 2 -->
       <div class="how-step reverse reveal reveal-delay-1">
         <div class="how-step-content">
@@ -736,7 +736,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
           </div>
         </div>
       </div>
-
+ 
       <!-- STEP 3 -->
       <div class="how-step reveal reveal-delay-1">
         <div class="how-step-content">
@@ -767,7 +767,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
           </div>
         </div>
       </div>
-
+ 
       <!-- STEP 4 -->
       <div class="how-step reverse reveal reveal-delay-1">
         <div class="how-step-content">
@@ -823,7 +823,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
           </div>
         </div>
       </div>
-
+ 
       <!-- STEP 5 -->
       <div class="how-step reveal reveal-delay-1">
         <div class="how-step-content">
@@ -866,11 +866,11 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
           <div class="s5-pdf-btn">📄 Gerar Relatório de Avaliação PDF</div>
         </div>
       </div>
-
+ 
     </div>
   </div>
 </section>
-
+ 
 <!-- AI SECTION -->
 <section class="section-ai">
   <div class="ai-inner">
@@ -949,7 +949,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
     </div>
   </div>
 </section>
-
+ 
 <!-- DOSSIE SECTION -->
 <section class="section-dossie">
   <div class="dossie-inner">
@@ -993,7 +993,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
         </div>
       </div>
     </div>
-
+ 
     <div class="reveal reveal-delay-1">
       <div class="dossie-etapa-badge">⏱ Etapa 2 — Após o encerramento da obra</div>
       <div class="section-eyebrow">Dossiê do Flip</div>
@@ -1032,7 +1032,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
     </div>
   </div>
 </section>
-
+ 
 <!-- CTA FINAL -->
 <section class="section-cta" id="comecar">
   <div class="cta-inner">
@@ -1045,7 +1045,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
     <p class="cta-disclaimer">Disponível no navegador · Funciona no celular · Sem instalação</p>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
   <div class="footer-brand">Flipador.app</div>
@@ -1056,7 +1056,7 @@ footer { background: #1A1816; padding: 2rem clamp(1.5rem, 5vw, 4rem); display: f
   </div>
   <div class="footer-copy">© 2026 Flipador</div>
 </footer>
-
+ 
 <script>
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
